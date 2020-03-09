@@ -8,3 +8,7 @@ function randomDivId() {
   let n = Math.floor(Math.random() * 6) + 1;
   return `#slot-${d}${n}`;
 }
+
+function div(val, by){
+  return (val - val % by) / by;
+}
