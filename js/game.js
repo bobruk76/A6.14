@@ -9,11 +9,15 @@ function round() {
    .removeClass("target")
    .empty();
 
-  let divSelector = randomDivId();
-  let missSelector = randomDivId();
+   $(".miss")
+   .removeClass("miss");
 
-  $(missSelector).addClass("miss");
-  
+  let divSelector = randomDivId();
+    if (hits > 0) {
+    let missSelector = randomDivId();
+    $(missSelector).addClass("miss");
+  }
+
   $(divSelector)
     .addClass("target")
     .text(hits+1);
@@ -36,11 +40,12 @@ function reloadGame() {
 };
 
 function endGame() {
-
   $(".grid-wrapper").addClass("d-none");
   $("#progressbar").addClass("d-none");
+
   let totalPlayedMillis = getTimestamp() - firstHitTime;
   let totalPlayedSeconds = Number(totalPlayedMillis / 1000).toPrecision(3);
+
   $("#total-time-played").text(totalPlayedSeconds);
   $("#win-message").removeClass("d-none");
 }
@@ -53,6 +58,9 @@ function handleClick(event) {
    
     round();
   } else { if($(event.target).hasClass("miss")) {
+    hits = hits - 1;
+    addProgress(-10);
+    round();
 
   }}
 
