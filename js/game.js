@@ -38,6 +38,18 @@ function handleClick(event) {
 }
 
 function init() {
+const squares_coutn = [6, 6];
+const template = item =>{
+  const $square = $(`div class="col game-field align-text-bottom" id="slot-${item}"></div>`);
+  $(".grid-wrapper").append($square);
+
+};
+
+for(let i = 0; i<squares_coutn[0];++i){
+  for(let j = 0; j<squares_coutn[1];++j){
+    template(10 * i + j);
+  }
+}
   // TODO: заказчик просил отдельную кнопку, запускающую игру а не просто по загрузке
   round();
 

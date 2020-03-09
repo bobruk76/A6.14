@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/game.css">
 
     <title>PWS A6 HW</title>
@@ -12,47 +12,11 @@
 
   </head>
   <body>
-
-    <div class="container">
-      <h1>10 квадратов</h1>
-
-      <!-- FIXME: сейчас тут не все слоты, надо добавить нужных -->
-      <div class="row">
-        <div class="col game-field align-text-bottom" id="slot-11"></div>
-        <div class="col game-field align-text-bottom" id="slot-12"></div>
-        <div class="col game-field align-text-bottom" id="slot-13"></div>
-        <div class="col game-field align-text-bottom" id="slot-15"></div>
-        <div class="col game-field align-text-bottom" id="slot-16"></div>
-      </div>
-      <div class="row">
-        <div class="col game-field align-text-bottom" id="slot-21"></div>
-        <div class="col game-field align-text-bottom" id="slot-22"></div>
-        <div class="col game-field align-text-bottom" id="slot-23"></div>
-        <div class="col game-field align-text-bottom" id="slot-24"></div>
-        <div class="col game-field align-text-bottom" id="slot-25"></div>
-        <div class="col game-field align-text-bottom" id="slot-26"></div>
-      </div>
-      <div class="row">
-        <div class="col game-field align-text-bottom" id="slot-31"></div>
-        <div class="col game-field align-text-bottom" id="slot-32"></div>
-        <div class="col game-field align-text-bottom" id="slot-33"></div>
-        <div class="col game-field align-text-bottom" id="slot-34"></div>
-      </div>
-      <div class="row">
-        <div class="col game-field align-text-bottom" id="slot-41"></div>
-        <div class="col game-field align-text-bottom" id="slot-42"></div>
-        <div class="col game-field align-text-bottom" id="slot-44"></div>
-        <div class="col game-field align-text-bottom" id="slot-45"></div>
-        <div class="col game-field align-text-bottom" id="slot-46"></div>
-      </div>
-      <div class="row">
-        <div class="col game-field align-text-bottom" id="slot-61"></div>
-        <div class="col game-field align-text-bottom" id="slot-62"></div>
-        <div class="col game-field align-text-bottom" id="slot-63"></div>
-        <div class="col game-field align-text-bottom" id="slot-64"></div>
-        <div class="col game-field align-text-bottom" id="slot-65"></div>
-        <div class="col game-field" id="slot-66"></div>
-      </div>
+    <h1>10 квадратов</h1>
+    <div class="container-fluid">
+    <div class="grid-wrapper">
+      <!-- FIXME: сейчас тут не все слоты, надо добавить нужных -->      
+    </div>
 
       <div id="win-message" class="d-none">
         <!-- TODO: можно добавить красные квадратики с отрицательным весом и делать счёт попаданий в конце как разницу очков за попадание минус штрафные -->
@@ -64,8 +28,10 @@
     </div>
 
 
-    <script src="./js/jquery-3.4.1.min.js"></script>
-    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
     <script src="./js/utils.js"></script>
     <script src="./js/game.js"></script>
   </body>

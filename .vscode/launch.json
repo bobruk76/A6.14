@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "file:///C:/skillfactory.ru/A6.14",
+            "url": "file:///C:/skillfactory.ru/A6.14/index.html",
             "webRoot": "${workspaceFolder}"
         }
     ]
