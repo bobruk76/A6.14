@@ -13,9 +13,12 @@ function round() {
    .removeClass("miss");
 
   let divSelector = randomDivId();
-    if (hits > 0) {
+  if (hits > 0) {
     let missSelector = randomDivId();
-    $(missSelector).addClass("miss");
+    while(divSelector === missSelector){
+      missSelector = randomDivId();
+    }
+      $(missSelector).addClass("miss");
   }
 
   $(divSelector)
