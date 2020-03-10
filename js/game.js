@@ -28,7 +28,7 @@ function round() {
   if (hits === 0) {
     firstHitTime = getTimestamp();
   }
-  
+
   if (hits === maxHits) {
     endGame();
   }
@@ -44,7 +44,7 @@ function reloadGame() {
 
 function endGame() {
   $(".grid-wrapper").addClass("d-none");
-  $("#progressbar").addClass("d-none");
+  $(".progress").addClass("d-none");
 
   let totalPlayedMillis = getTimestamp() - firstHitTime;
   let totalPlayedSeconds = Number(totalPlayedMillis / 1000).toPrecision(3);
@@ -58,7 +58,7 @@ function handleClick(event) {
     addProgress();
     $(".miss").removeClass("miss");
     hits = hits + 1;
-   
+
     round();
   } else { if($(event.target).hasClass("miss")) {
     hits = hits - 1;
@@ -70,11 +70,11 @@ function handleClick(event) {
 }
 
 function initProgress() {
+  $(".progress").removeClass("d-none")
   $("#progressbar")
       .attr("aria-valuenow",0)
       .css("width", "0%")
-      .text("")
-      .removeClass("d-none");
+      .text("");
 };
 
 function addProgress(procent = 100 / maxHits) {
@@ -84,7 +84,7 @@ function addProgress(procent = 100 / maxHits) {
       .attr("aria-valuenow",current_progress)
       .css("width", current_progress + "%")
       .text(current_progress+"%");
-  }); 
+  });
 }
 
 function init() {
