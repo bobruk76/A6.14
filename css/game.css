@@ -5,6 +5,10 @@
   line-height: 10vh;
 }
 
+.game-field:not(.target):not(.miss):active{
+  background-color: black;
+}
+
 .target {
   background-color: green;
   color: white;
@@ -21,3 +25,4 @@
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(6, minmax(1fr,100px));
 }
+

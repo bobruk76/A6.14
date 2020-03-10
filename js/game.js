@@ -64,10 +64,7 @@ function handleClick(event) {
     hits = hits - 1;
     addProgress(-10);
     round();
-
-  }}
-
-}
+}}}
 
 function initProgress() {
   $(".progress").removeClass("d-none")
