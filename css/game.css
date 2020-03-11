@@ -1,12 +1,18 @@
+@font-face {
+  src: url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap&subset=cyrillic');
+  font-family: "Press Start 2P";
+}
 body{
   display: grid;
   grid-template-rows: 21vh 78vh;
+  background: url('http://paper-backgrounds.com/textureimages/2012/05/white-concrete-wall-texture-background-hd.jpg') ;
 }
-
+h1 {
+  font-family: "Press Start 2P", Helvetica, Arial, sans-serif;
+}
 .game-field {
   background-color: orange;
-  /* min-height: 10vh; */
-  margin: 1px 1px 1px 1px;
+  margin: 2px;
   line-height: 10vh;
 }
 
