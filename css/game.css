@@ -1,11 +1,11 @@
 body{
   display: grid;
-  grid-template-rows: 1fr 5fr;
+  grid-template-rows: 21vh 78vh;
 }
 
 .game-field {
   background-color: orange;
-  min-height: 10vh;
+  /* min-height: 10vh; */
   margin: 1px 1px 1px 1px;
   line-height: 10vh;
 }
@@ -28,17 +28,16 @@ body{
 .grid-wrapper {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(6, minmax(1fr,100px));
+  grid-template-rows: repeat(6, 1fr);
 }
 
  /* clock */
 
 .clock {
-  --height: 100%;
   position: relative;
 
-  height: --height;
-  width: calc(--height);
+  height: 20vh;
+  width: 20vh;
  }
 
 .seconds {
@@ -48,8 +47,8 @@ body{
   position: absolute;
   top: 14%;
   transform-origin: 50% 80%;
-  width: 1%;
-  z-index: 8;
+  width: 2px;
+  z-index: 10;
 }
 
 @keyframes rotate {
