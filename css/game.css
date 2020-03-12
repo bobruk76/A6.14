@@ -3,7 +3,7 @@
 body{
   display: grid;
   grid-template-rows: 21vh 78vh;
-  background: url('http://paper-backgrounds.com/textureimages/2012/05/white-concrete-wall-texture-background-hd.jpg') ;
+  background:  rgba(180, 178, 178, 0.274);
 }
 
 h1 {
@@ -12,7 +12,7 @@ h1 {
   align-items: center;
   text-align: center;
 
-  font-size: 5vw;
+  font-size: 2vw;
   font-family: "Press Start 2P", Helvetica, Arial, sans-serif;
 }
 
@@ -43,10 +43,14 @@ h1 {
   grid-template-rows: repeat(6, 1fr);
 }
 
+.button-reload{
+  height: inherit;
+}
  /* clock */
 
 .clock {
   position: relative;
+  content: "";
 
   height: 20vh;
   width: 20vh;
