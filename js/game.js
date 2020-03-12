@@ -40,7 +40,20 @@ function reloadGame() {
   $("#win-message").addClass("d-none");
   initProgress();
   round();
+  initCloc();
 };
+
+function pauseCloc() {
+  let second = document.getElementsByClassName('animation')[0];
+  second.style.addClass(".animation-paused");
+}
+
+function initCloc() {
+  let second = document.getElementsByClassName('animation')[0];
+  second.style.animation = "none";
+  second.offsetHeight;
+  second.style.animation = "";
+}
 
 function endGame() {
   $(".grid-wrapper").addClass("d-none");
@@ -51,6 +64,8 @@ function endGame() {
 
   $("#total-time-played").text(totalPlayedSeconds);
   $("#win-message").removeClass("d-none");
+
+  pauseCloc();
 }
 
 function handleClick(event) {
@@ -60,6 +75,7 @@ function handleClick(event) {
     hits = hits + 1;
 
     round();
+
   } else { if($(event.target).hasClass("miss")) {
     hits = hits - 1;
     addProgress(-10);
@@ -92,7 +108,8 @@ function init() {
 
   for(let i = 0; i < numDivs; ++i){
       template(10 * (div(i,6)+1) + i % 6 +1);
-}
+  }
+
   round();
   $(".game-field").click(handleClick);
   $("#button-reload").click(reloadGame);
