@@ -43,8 +43,8 @@ h1 {
   grid-template-rows: repeat(6, 1fr);
 }
 
-.button-reload{
-  height: inherit;
+#button-reload{
+  overflow: hidden;
 }
  /* clock */
 
