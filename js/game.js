@@ -44,12 +44,13 @@ function reloadGame() {
 };
 
 function pauseCloc() {
-  let second = document.getElementsByClassName('animation')[0];
-  second.style.addClass(".animation-paused");
+  $('.animation').addClass("animation-paused");
 }
 
 function initCloc() {
   let second = document.getElementsByClassName('animation')[0];
+
+  second.classList.remove("animation-paused")
   second.style.animation = "none";
   second.offsetHeight;
   second.style.animation = "";
