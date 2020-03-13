@@ -44,7 +44,7 @@ h1 {
 }
 
 #button-reload{
-  overflow: hidden;
+  overflow: auto;
 }
  /* clock */
 
@@ -68,8 +68,8 @@ h1 {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 5px;
-  height: 5px;
+  width: 10px;
+  height: 10px;
   z-index: 20;
 }
 
